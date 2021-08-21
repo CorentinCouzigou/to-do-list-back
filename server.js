@@ -33,13 +33,10 @@ app.use((req, res, next) => {
 
 /* Routes */
 // Page d'accueil du serveur : GET /
-app.get('/', (req, res) => {
-  console.log('>> GET /');
-  res.sendFile( __dirname + '/index.html');
-});
 
 app.get('/', (req, res) => {
-  console.log('>> GET /recipes');
+  console.log('>> GET /');
+  console.log(tasksList);
   res.json(tasksList);
 });
 
