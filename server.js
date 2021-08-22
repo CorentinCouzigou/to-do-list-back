@@ -30,10 +30,7 @@ app.use((req, res, next) => {
 
 /* Routes */
 // Page d'accueil du serveur : GET /
-app.get('/', (req, res) => {
-  console.log('>> GET /');
-  res.sendFile( __dirname + '/index.html');
-});
+
 app.get('/', (req, res) => {
   console.log('>> GET /');
   res.json(tasksList);

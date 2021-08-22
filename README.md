@@ -9,6 +9,14 @@ De plus l'application est responsive.</p>
 <p>Pour le coté back, le serveur à été construit en Node.js en utilisant Express. Le contenu est simple et à juste pour charge de renvoyer un .json avec une liste de tâches.</p>
 
 ****
+## Pour démarrer le back:
+<p>
+le back est sur le port localhost:3001 </br>
+Après avoir cloné le repo: </br>
+1 => npm i  </br>
+2 => npm start </br>
+</p>
+
 ## Pour démarrer le front:
 <p>
 le front est sur le port localhost:3000 </br>
@@ -17,13 +25,7 @@ Après avoir cloné le repo: </br>
 2 => npm start </br>
 </p>
 
-## Pour démarrer le back:
-<p>
-le back est sur le port localhost:3001 </br>
-Après avoir cloné le repo: </br>
-1 => npm i  </br>
-2 => npm start </br>
-</p>
+
 
 ****
 ## Résultats:
