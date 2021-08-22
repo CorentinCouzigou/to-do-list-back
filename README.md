@@ -24,3 +24,11 @@ Après avoir cloné le repo: </br>
 1 => npm i  </br>
 2 => npm start </br>
 </p>
+
+****
+## Résultats:
+### Front =>
+![Alt text](../to-do-list-back/toDoList.png "Front Result")
+
+### Back =>
+![Alt text](../to-do-list-back/toDoListBACK.png "Back Result")
