@@ -35,6 +35,7 @@ app.get('/', (req, res) => {
   console.log('>> GET /');
   res.json(tasksList);
 });
+// pas de BDD donc pas de route post malheureusement pour ajouter des nouvelles tasks au serveur!
 
 /*
  * Server
