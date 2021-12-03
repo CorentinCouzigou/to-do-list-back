@@ -1,10 +1,11 @@
 // librairies
 const express = require('express');
+const fs = require('fs');
 // const bodyParser = require('body-parser');
 
 
 // list des tasks de la to do list
-const tasksList = require('./list.json');
+const tasksList = require('./list');
 
 //utilisation de express pour l'application et description du port dans notre cas localhost 3001
 const app = express();
@@ -27,15 +28,34 @@ app.use((req, res, next) => {
     next();
   }
 });
-
+app.use(express.json());
+/* parser */
+app.use(express.urlencoded({
+  extended: true
+}));
 /* Routes */
-// Page d'accueil du serveur : GET /
-
+// Page d'accueil du serveur : GET / obtentions des datas
 app.get('/', (req, res) => {
   console.log('>> GET /');
   res.json(tasksList);
 });
-// pas de BDD donc pas de route post malheureusement pour ajouter des nouvelles tasks au serveur!
+//routes pour modifier les datas
+app.post('/', (req, res) => {
+  console.log('>> POST /');
+  const newTaskList = req.body.newTaskList;
+  const dataJson = JSON.stringify(newTaskList);
+  console.log(dataJson);
+  fs.writeFile('list.json', dataJson, 'utf8', (err) => {
+    if (err) {
+      console.log('error modify datas', err);;
+    }
+    else {
+      console.log("JSON data is saved.");
+      res.json({ msg: 'Data is saved, Success!' });
+    };
+  });
+});
+
 
 /*
  * Server
